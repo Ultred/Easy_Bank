@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
+/* btn */
+body {
+  font-family: "Public Sans", sans-serif;
+  overflow-x: hidden;
+}
+.btn-main {
+  font-weight: 400;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+  color: #fff;
+  background: linear-gradient(151deg, #31d35c 13%, #2bb7da 83%);
+  padding: 0.6em 1.3em;
+  border: none;
+  width: 160px;
+
+  border-radius: 50px;
+  transition: 873ms;
+  cursor: pointer;
+}
+.btn-main:hover {
+  opacity: 70%;
+}
+/* nav */
+.hovernav {
+  position: relative;
+}
+.hovernav::after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  transition: all 0.4s ease;
+  background-color: #31d35c;
+  height: 4px;
+  width: 100%;
+}
+.hovernav:hover::after {
+  opacity: 1;
+}
+.tria {
+  position: absolute;
+  height: 0px;
+  z-index: -20;
+  left: 0;
+  top: -16px;
+  background-color: #31d35c;
+  width: 100%;
+}
+.navhum {
+  background-color: hsl(233, 26%, 24%);
+  display: block;
+  width: 33px;
+  margin: 7px;
+  height: 3px;
+}
+.tria.long {
+  height: 341px;
+}
+.navhum.long {
+  background-color: white;
+}
+.hoverfoot {
+  position: relative;
+}
+
+.hoverfoot::after {
+  content: "";
+  opacity: 0;
+  transition: all 0.4s ease;
+  background-color: #31d35c;
+  width: 90%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.hoverfoot:hover::after {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .hoverfoot::after {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .hovernav::after {
+    bottom: -25px;
+    width: 120%;
+  }
+}
