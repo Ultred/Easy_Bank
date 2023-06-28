@@ -8,6 +8,7 @@
 body {
   font-family: "Public Sans", sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth scroll;
 }
 .btn-main {
   font-weight: 400;
@@ -59,6 +60,7 @@ body {
   width: 33px;
   margin: 7px;
   height: 3px;
+  transition: all 0.4s ease;
 }
 .tria.long {
   height: 341px;
@@ -66,10 +68,22 @@ body {
 .navhum.long {
   background-color: white;
 }
+.navb.nav {
+  left: 57px;
+  position: inherit;
+}
+.nava.nav {
+  rotate: 135deg;
+  translate: 0px 10px;
+}
+.navc.nav {
+  rotate: -135deg;
+  translate: 0px -10px;
+}
+/* Footer */
 .hoverfoot {
   position: relative;
 }
-
 .hoverfoot::after {
   content: "";
   opacity: 0;
@@ -84,6 +98,28 @@ body {
 .hoverfoot:hover::after {
   opacity: 1;
 }
+
+/* Hero Section */
+
+.image::after {
+  content: "";
+  background-image: url("/images/image-mockups.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  position: absolute;
+  min-height: 28rem;
+  width: 100%;
+}
+.image {
+  background-image: url("/images/bg-intro-mobile.svg");
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 30rem;
+  width: 100%;
+}
 @media (max-width: 768px) {
   .hoverfoot::after {
     width: 100%;
@@ -93,5 +129,36 @@ body {
   .hovernav::after {
     bottom: -25px;
     width: 120%;
+  }
+  .image {
+    background-image: url("/images/bg-intro-desktop.svg");
+
+    background-size: 166%;
+    background-repeat: no-repeat;
+    background-position: center left;
+    min-height: 30rem;
+    transition: all ease-in 0.4s;
+    width: 152%;
+  }
+  .image::after {
+    background-position: center left;
+    min-height: 41rem;
+    left: 15%;
+    transition: all ease-in 0.4s;
+  }
+}
+@media (min-width: 1024px) {
+  .image {
+    width: 110%;
+    left: 4%;
+  }
+  .image::after {
+    min-height: 63rem;
+    bottom: -59%;
+    background-size: 90%;
+    left: 20%;
+  }
+  .section {
+    height: 85vh;
   }
 }

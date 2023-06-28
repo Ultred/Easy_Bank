@@ -32,14 +32,14 @@
         <button class="btn-main hidden md:block">Request Invite</button>
 
         <div id="toggle" class="md:hidden relative z-40 cursor-pointer">
-          <span class="navhum a"></span>
-          <span class="navhum b"></span>
-          <span class="navhum c"></span>
+          <span class="navhum nava"></span>
+          <span class="navhum navb"></span>
+          <span class="navhum navc"></span>
           <span id="navlong" class="tria"></span>
         </div>
         <ul
           id="navbar"
-          class="absolute flex-col flex bg-white w-full mr-28 text-GrayishBlue text-center gap-8 py-4 navtria md:hidden translate-x-3 duration-100 bottom-20"
+          class="absolute flex-col left-0 rounded-xl mx-auto flex bg-white w-11/12 text-GrayishBlue text-center gap-8 py-4 navtria md:hidden translate-x-3 duration-100 bottom-20"
         >
           <li class="hovernav">
             <a class="hover:text-DarkBlue" href="#home">Home</a>
@@ -59,35 +59,23 @@
         </ul>
       </nav>
     </header>
-    <section
-      class="md:flex md:h-screen md:flex-row-reverse lg:max-w-7xl md:mx-auto"
-    >
-      <div>
-        <picture>
-          <source
-            class="lg:w-full"
-            media="(min-width: 786px)"
-            srcset="./images/bg-intro-desktop.svg"
-          />
-          <img class="w-full" src="./images/bg-intro-mobile.svg" alt="" />
-        </picture>
-        <img
-          class="absolute -top-20 lg:-right-32"
-          src="images/image-mockups.png"
-          alt=""
-        />
+    <section class="section">
+      <div class="lg:max-w-7xl md:mx-auto md:flex md:flex-row-reverse">
+        <div class="image">
+          <!-- <img src="images/image-mockups.png" alt="" /> -->
+        </div>
+        <article class="text-center md:text-left my-32 px-4 article-hero">
+          <h1 class="text-DarkBlue text-5xl">
+            Next generation digital banking
+          </h1>
+          <p class="text-GrayishBlue my-5">
+            Take your financial life online. Your Easybank account will be a
+            one-stop-shop for spending, saving, budgeting, investing, and much
+            more.
+          </p>
+          <button class="btn-main">Request Invite</button>
+        </article>
       </div>
-      <article
-        class="text-center mb-20 px-4 md:mb-0 md:text-left md:flex md:flex-col md:justify-center"
-      >
-        <h1 class="text-DarkBlue text-5xl">Next generation digital banking</h1>
-        <p class="text-GrayishBlue my-5">
-          Take your financial life online. Your Easybank account will be a
-          one-stop-shop for spending, saving, budgeting, investing, and much
-          more.
-        </p>
-        <button class="btn-main mt-4">Request Invite</button>
-      </article>
     </section>
     <section class="text-center py-10 bg-LightGrayishBlue md:text-left">
       <div class="lg:max-w-7xl md:mx-auto px-4">
